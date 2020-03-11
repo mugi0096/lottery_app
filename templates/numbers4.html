@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}ナンバーズ４予想{% endblock %} 
+
+{% block content %}
+    <img src="/static/src/numbers4.png" />
+    <form action="/make_n4" method="get">
+        <button name="make_number" class="btn btn-primary" value="from get">ナンバーズ4の番号を予想する</button>
+    </form>
+
+    <h2>予想番号</h2>
+    <div class="n4-imgs">
+        <img src={{img_1000}} />
+        <img src={{img_100}} />
+        <img src={{img_10}} />
+        <img src={{img_1}} />
+    </div>
+
+    <img src="/static/src/manekineko.png" class="manekineko"/>
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "../lottery_app",
+    "ignore": [
+      "firebase.json",
+      ".gitignore",
+      "**/node_modules/**",
+      "requirements.txt",
+      "runtime.txt",
+      "Procfile",
+      ".env"
+    ]
+  }
+}

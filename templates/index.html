@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}宝くじ予想{% endblock %} 
+
+{% block content %}
+
+<!--
+<input type="button" class="btn btn-primary" onclick="location.href='/n3'" value="ナンバーズ３予想">
+<input type="button" class="btn btn-primary" onclick="location.href='/n4'" value="ナンバーズ４予想">
+-->
+<main class="main-v">
+    <div class="main-container">
+        <div class="imgs">
+            <img src="static/src/background_blue.png" alt="メインビジュアル" class="main-img"/>
+            <img src="static/src/data_analysis.png" alt="アイコン" class="icon"/>
+        </div>
+        <div class="main-info">
+            <h2>過去データに基づいた当選番号予測</h2>
+        </div>
+    </div>
+ </main>
+ <ul class="discription">
+    <li>
+        <h3>出現数字には偏りがある！</h3>
+        <p>ロトやナンバーズなどの宝くじでは、全ての数字が均等に現れるはずですが、
+            過去の当選番号を調べるとそこに偏りが存在することがわかります。ナンバーズでは
+            位によって出やすい数字、出にくい数字が変わっていきます。</p>
+        <p>以下のグラフはナンバーズ４の二つ目の各数字の出現回数を表しています。
+            グラフを見ると、２が出にくく、９が出やすいようです。
+        </p>
+        <figure>
+            <img src="/static/src/count100_n4.png"/>
+            <figcaption>ナンバーズ４の二つ目の各数字の出現回数</figcaption>
+        </figure>
+    </li>
+    <li>
+        <h3>偏りから数字を生成！</h3>
+        <p>当サイトでは、およそ5000回分の過去データから解析した偏りからそれぞれの数字が出る確率を求め、その確率から
+            番号を生成するため、普通に選ぶより当たる確率が高くなります。
+        </p>
+        <img src="/static/src/richman.png"/>
+    </li>
+</ul>
+{% endblock %}
